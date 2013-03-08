@@ -1,0 +1,9 @@
+%li
+  .well
+    = raw(image_tag(avatar_url(user, 40)))
+    .userInformations
+      %p= user
+      %p= user.email if user.email_visible?
+      %p= user.twitter if user.twitter.present?
+      %p= user.github if user.github.present?
+      %p= user.stackoverflow if user.stackoverflow.present?

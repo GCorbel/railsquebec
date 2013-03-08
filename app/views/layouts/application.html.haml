@@ -51,10 +51,9 @@
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
         .span9
-          -if alert
-            .alert= alert
-          -if notice
-            .notice= notice
+          = alert_box("success", flash[:notice])
+          = alert_box("error", flash[:error])
+          = alert_box("alert", flash[:alert])
           .well
             = yield
 

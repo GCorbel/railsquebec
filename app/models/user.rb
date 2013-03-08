@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
                   :city, :email_visible, :github, :postal_code, :stackoverflow,
                   :street, :twitter, :username, :website
 
+  validates :username, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
+
   def to_s
     username
   end

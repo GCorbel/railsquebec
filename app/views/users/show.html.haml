@@ -1,0 +1,12 @@
+#userPage
+  .avatar= raw(image_tag(avatar_url(@user)))
+  .userDescriptionLeft
+    %p= "Username : #{@user}"
+    = email_for(@user)
+    = twitter_for(@user)
+    = github_for(@user)
+    = website_for(@user)
+  .userDescriptionRight
+    -if @user.city.present?
+      %p= "City : #{@user.city}"
+    %p= "Registration Date : #{@user.created_at.strftime("%Y-%m-%d")}"

@@ -32,7 +32,12 @@
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
             %ul.nav.pull-right
-              %li= link_to "Sign In", new_user_registration_path
+              -if current_user
+                %li= link_to "Sign out",
+                        destroy_user_session_path,
+                        method: :delete
+              -else
+                %li= link_to "Sign In", new_user_registration_path
 
     .container-fluid
 

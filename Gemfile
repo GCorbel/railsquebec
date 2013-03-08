@@ -17,7 +17,9 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier',     '>= 1.0.3'
+  gem 'less-rails',   '2.2.6'
+  gem 'therubyracer', '0.11.3'
 end
 
 gem 'jquery-rails'
@@ -48,7 +50,9 @@ group :test do
   gem 'launchy',            '2.1.2'
 end
 
-gem 'devise',               '2.2.3'
-gem 'inherited_resources',  '1.3.1'
-gem 'haml-rails',           '0.4'
-gem 'turbolinks',           '1.0.0'
+gem 'devise',                   '2.2.3'
+gem 'inherited_resources',      '1.3.1'
+gem 'haml-rails',               '0.4'
+gem 'turbolinks',               '1.0.0'
+gem 'twitter-bootstrap-rails',  '2.1.9'
+gem 'simple_form',              '2.0.4'

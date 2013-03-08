@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me,
                   :city, :email_visible, :github, :postal_code, :stackoverflow,
                   :street, :twitter, :username, :website
+
+  def to_s
+    username
+  end
 end

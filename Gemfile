@@ -48,4 +48,5 @@ group :test do
   gem 'launchy',            '2.1.2'
 end
 
-gem 'devise', '2.2.3'
+gem 'devise',               '2.2.3'
+gem 'inherited_resources',  '1.3.1'

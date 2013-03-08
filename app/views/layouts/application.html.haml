@@ -31,6 +31,8 @@
               %li= link_to "Link 1", "/path1"
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
+            %ul.nav.pull-right
+              %li= link_to "Sign In", new_user_registration_path
 
     .container-fluid
 
@@ -47,7 +49,8 @@
             .alert= alert
           -if notice
             .notice= notice
-          = yield
+          .well
+            = yield
 
       %footer
         %p &copy; RailsQuebec 2013

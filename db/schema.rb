@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(:version => 20130308154342) do
   create_table "users", :force => true do |t|
     t.string   "github",                 :default => ""
     t.string   "twitter",                :default => ""
-    t.string   "stackoverflow",          :default => ""
     t.boolean  "email_visible",          :default => true
     t.string   "website",                :default => ""
     t.string   "username",               :default => "",   :null => false

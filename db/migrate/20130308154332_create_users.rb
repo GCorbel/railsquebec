@@ -3,7 +3,6 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :github,         default: ""
       t.string :twitter,        default: ""
-      t.string :stackoverflow,  default: ""
       t.boolean :email_visible, default: true
       t.string :website,        default: ""
       t.string :username,       default: "", null: false

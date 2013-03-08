@@ -50,3 +50,4 @@ end
 
 gem 'devise',               '2.2.3'
 gem 'inherited_resources',  '1.3.1'
+gem 'haml-rails',           '0.4'

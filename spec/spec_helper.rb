@@ -21,6 +21,7 @@ Spork.prefork do
     config.include Devise::TestHelpers, type: :controller
     config.include ControllerHelpers, type: :controller
   end
+  Geocoder.stubs(:search).returns([])
 end
 
 Spork.each_run do

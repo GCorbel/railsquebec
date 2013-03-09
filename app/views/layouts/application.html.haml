@@ -54,8 +54,7 @@
           = alert_box("success", flash[:notice])
           = alert_box("error", flash[:error])
           = alert_box("alert", flash[:alert])
-          .well
-            = yield
+          = yield
 
       %footer
         %p &copy; RailsQuebec 2013

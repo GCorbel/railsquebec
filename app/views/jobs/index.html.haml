@@ -1,3 +1,5 @@
+.well
+  = link_to "Add a new job", new_job_path, class: "btn"
 - @jobs.each do |job|
   .well
     %p= "Job name : " + job.post_name

@@ -1,3 +1,12 @@
-// Place all the styles related to the Jobs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.jobFormLeft {
+  display: inline-block;
+}
+
+.jobFormRight {
+  display: inline-block;
+  margin-left: 55px;
+}
+
+textarea.job_description {
+  height: 10px;
+}

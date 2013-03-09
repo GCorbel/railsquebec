@@ -7,6 +7,7 @@ Railsquebec::Application.routes.draw do
 
   resources :users
   resources :jobs
+  resources :events
   resources :maps, only: [:index] do
     collection do
       get :users

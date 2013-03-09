@@ -6,7 +6,6 @@ class Job < ActiveRecord::Base
 
   validates :company_name, presence: true
   validates :email, presence: true
-  validates :website, presence: true
   validates :post_name, presence: true
   validates :address, presence: true
   validates :city, presence: true

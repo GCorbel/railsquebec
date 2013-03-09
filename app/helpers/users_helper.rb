@@ -26,7 +26,7 @@ module UsersHelper
   def website_for(user)
     if user.website
       content_tag(:p) do
-        link_to user.website
+        link_to user.website, user.website
       end
     end
   end

@@ -3,6 +3,6 @@
   %p= "Company name : " + @job.company_name
   %p= "Address : #{@job.street}, #{@job.postal_code}, #{@job.city}"
   - if @job.website
-    %p= "Website : " + link_to(@job.website)
+    %p= "Website : " + link_to(@job.website, @job.website)
   %p= "Description : " + @job.description
   %p= "Creation date : " + @job.created_at.strftime("%Y-%m-%d")

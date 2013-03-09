@@ -22,8 +22,8 @@ describe ApplicationHelper do
   end
 
   describe :avatar_url do
-    before { Rails.env.stubs(:test?).returns(false) }
-    after { Rails.env.stubs(:test?).returns(true) }
+    before { Rails.env.stubs(:production?).returns(true) }
+    after { Rails.env.stubs(:production?).returns(false) }
 
     it "give a path to the avatar" do
       expect(helper.avatar_url(user)).to eq "http://gravatar.com/avatar/#{avatar_id}.png?s=100&d=#{CGI.escape(default_url)}"

@@ -1,2 +1,6 @@
 - @jobs.each do |job|
-  = job.post_name
+  .well
+    %p= "Job name : " + job.post_name
+    %p= "Company name : " + job.company_name
+    %p= "Description : " + raw(truncate(sanitize(job.description), length: 200))
+    %p= "Creation date : " + job.created_at.strftime("%Y-%m-%d")

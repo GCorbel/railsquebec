@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20130309153112) do
     t.string   "email"
     t.string   "website"
     t.string   "post_name"
-    t.string   "address"
+    t.string   "street"
     t.string   "city"
     t.string   "postal_code"
     t.text     "description"

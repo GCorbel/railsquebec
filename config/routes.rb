@@ -10,6 +10,7 @@ Railsquebec::Application.routes.draw do
   resources :maps, only: [:index] do
     collection do
       get :users
+      get :jobs
     end
   end
 

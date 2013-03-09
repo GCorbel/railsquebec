@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(:version => 20130309153112) do
     t.string   "city"
     t.string   "postal_code"
     t.text     "description"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

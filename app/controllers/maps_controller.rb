@@ -16,4 +16,19 @@ class MapsController < ApplicationController
       end
     end
   end
+
+  def jobs
+    jobs = Job.select('id, post_name,latitude,longitude').geocoded.map! do|o|
+      link = user_url(o["id"])
+      title = o["post_name"]
+      icon = view_context.image_path('maps/jobs.png')
+      o.attributes.merge(link: link, title: title, icon: icon)
+    end
+
+    respond_to do |f|
+      f.json do
+        render json: jobs
+      end
+    end
+  end
 end

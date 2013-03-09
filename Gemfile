@@ -50,6 +50,12 @@ group :test do
   gem 'launchy',            '2.1.2'
 end
 
+group :development, :test do
+  gem 'pry', '0.9.8.4'
+  gem 'pry-remote', '0.1.1'
+  gem 'pry-nav', '0.2.0'
+end
+
 gem 'devise',                   '2.2.3'
 gem 'inherited_resources',      '1.3.1'
 gem 'haml-rails',               '0.4'

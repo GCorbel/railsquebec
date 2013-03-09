@@ -1,7 +1,17 @@
 Railsquebec::Application.routes.draw do
+  get "jobs/index"
+
+  get "maps/index"
+
   devise_for :users
 
   resources :users
+  resources :jobs
+  resources :maps, only: [:index] do
+    collection do
+      get :users
+    end
+  end
 
 
   # The priority is based upon order of creation:

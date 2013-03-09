@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308154342) do
+ActiveRecord::Schema.define(:version => 20130309153112) do
+
+  create_table "jobs", :force => true do |t|
+    t.string   "company_name"
+    t.string   "email"
+    t.string   "website"
+    t.string   "post_name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "postal_code"
+    t.text     "description"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "github",                 :default => ""
@@ -21,7 +34,9 @@ ActiveRecord::Schema.define(:version => 20130308154342) do
     t.string   "username",               :default => "",   :null => false
     t.string   "street",                 :default => ""
     t.string   "city",                   :default => ""
-    t.string   "postal_code",            :default => ""
+    t.string   "postal_code",            :default => "",   :null => false
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false
     t.string   "email",                  :default => "",   :null => false

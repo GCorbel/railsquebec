@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Addresseable
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -12,6 +14,7 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
+  validates :postal_code, presence: true
 
   def to_s
     username

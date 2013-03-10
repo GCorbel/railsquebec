@@ -47,10 +47,19 @@
         .span3
           .well.sidebar-nav
             %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li.nav-header Latest events
+              - EventPresenter.latest(5).each do |event|
+                %li= link_to event.title, event
+          .well.sidebar-nav
+            %ul.nav.nav-list
+              %li.nav-header Latest jobs
+              - JobPresenter.latest(5).each do |job|
+                %li= link_to job.post_name, job
+          .well.sidebar-nav
+            %ul.nav.nav-list
+              %li.nav-header Latest members
+              - UserPresenter.latest(5).each do |user|
+                %li= link_to user
         .span9
           = alert_box("success", flash[:notice])
           = alert_box("error", flash[:error])

@@ -1,5 +1,5 @@
 class EventPresenter
   def self.latest(size)
-    Event.order("date desc").limit(size)
+    Event.limit(size)
   end
 end

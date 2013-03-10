@@ -1,6 +1,8 @@
 class Event < ActiveRecord::Base
   include Addresseable
 
+  default_scope { order("date DESC") }
+
   attr_accessible :city, :date, :description, :postal_code, :street, :title,
                   :website
 

@@ -1,6 +1,8 @@
 class Job < ActiveRecord::Base
   include Addresseable
 
+  default_scope { order("created_at DESC") }
+
   attr_accessible :street, :city, :company_name, :description, :email,
                   :postal_code, :post_name, :website
 

@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   include Addresseable
 
+  default_scope { order("created_at DESC") }
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

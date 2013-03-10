@@ -18,4 +18,8 @@ module ApplicationHelper
   def image_for(user)
     image_tag(avatar_url(user, 76), class: 'avatar')
   end
+
+  def excerpt(text)
+    raw(truncate(sanitize(text), length: 200))
+  end
 end

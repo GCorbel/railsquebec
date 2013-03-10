@@ -42,4 +42,11 @@ describe ApplicationHelper do
       end
     end
   end
+
+  describe :excerpt do
+    it "give an execrpt for a phrase" do
+      text = "This is a very very very long text. I just text the method to do an execrpt and it will cut this phrase because it's tooooooooooo long. Ho, it's raining today! Kevin is in the kitchen. Where is my umbrella!?"
+      expect(excerpt(text)).to eq "This is a very very very long text. I just text the method to do an execrpt and it will cut this phrase because it's tooooooooooo long. Ho, it's raining today! Kevin is in the kitchen. Where is my ..."
+    end
+  end
 end

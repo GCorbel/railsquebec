@@ -2,6 +2,6 @@
   %h1= @event.title
   %p= "Date : " + @event.date.strftime("%Y-%m-%d")
   %p= "Address : #{@event.street}, #{@event.postal_code}, #{@event.city}"
-  - if @event.website
-    %p= "Website : " + link_to(@event.website, @event.website)
+  - if @event.website.present?
+    %p= "Website : " + raw(link_to(@event.website, @event.website))
   %p= "Description : " + @event.description

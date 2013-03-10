@@ -10,4 +10,5 @@ class Job < ActiveRecord::Base
   validates :street, presence: true
   validates :city, presence: true
   validates :postal_code, presence: true
+  validates :description, presence: true
 end

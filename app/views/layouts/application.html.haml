@@ -28,9 +28,10 @@
           %a.brand(href="#") Railsquebec
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Events",  events_path
+              %li= link_to "Jobs",    jobs_path
+              %li= link_to "Members", users_path
+              %li= link_to "Map",     maps_path
             %ul.nav.pull-right
               -if current_user
                 %li= link_to "Sign out",

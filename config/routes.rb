@@ -12,6 +12,7 @@ Railsquebec::Application.routes.draw do
     collection do
       get :users
       get :jobs
+      get :events
     end
   end
 

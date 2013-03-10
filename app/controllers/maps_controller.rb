@@ -31,4 +31,19 @@ class MapsController < ApplicationController
       end
     end
   end
+
+  def events
+    events = Event.select('id, title,latitude,longitude').geocoded.map! do|o|
+      link = user_url(o["id"])
+      title = o["title"]
+      icon = view_context.image_path('maps/events.png')
+      o.attributes.merge(link: link, title: title, icon: icon)
+    end
+
+    respond_to do |f|
+      f.json do
+        render json: events
+      end
+    end
+  end
 end

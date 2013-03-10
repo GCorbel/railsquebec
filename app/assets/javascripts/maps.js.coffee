@@ -1,7 +1,7 @@
 if ($('#map_canvas').length)
   map = null
   markers = {}
-  resources = ['users', 'jobs']
+  resources = ['users', 'jobs', 'events']
 
   load_script = ->
     script = document.createElement("script")

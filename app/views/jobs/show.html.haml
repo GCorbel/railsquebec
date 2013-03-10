@@ -1,6 +1,7 @@
 .well
   %h1= @job.post_name
   %p= "Company name : " + @job.company_name
+  %p= raw("Email : " + raw(link_to(@job.email, "mailto:#{@job.email}")))
   %p= "Address : #{@job.street}, #{@job.postal_code}, #{@job.city}"
   - if @job.website.present?
     %p= "Website : " + raw(link_to(@job.website, @job.website))

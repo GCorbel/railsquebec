@@ -1,3 +1,5 @@
+.well
+  = link_to "Add a new event", new_event_path, class: "btn"
 - @events.each do |event|
   .well
     %p= "Event name : " + event.title

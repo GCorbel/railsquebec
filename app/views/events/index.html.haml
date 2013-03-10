@@ -6,3 +6,4 @@
     %p= "Date : " + event.date.strftime("%Y-%m-%d")
     %p= "City : " + event.city
     %p= "Description : " + raw(truncate(sanitize(event.description), length: 200))
+    = link_to "Read more...", event

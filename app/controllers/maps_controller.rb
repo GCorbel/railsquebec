@@ -3,47 +3,14 @@ class MapsController < ApplicationController
   end
 
   def users
-    users = User.select('id, username,latitude,longitude').geocoded.map! do|o|
-      link = user_url(o["id"])
-      title = o["username"]
-      icon = view_context.image_path('maps/users.png')
-      o.attributes.merge(link: link, title: title, icon: icon)
-    end
-
-    respond_to do |f|
-      f.json do
-        render json: users
-      end
-    end
+    @users = User.geocoded
   end
 
   def jobs
-    jobs = Job.select('id, post_name,latitude,longitude').geocoded.map! do|o|
-      link = user_url(o["id"])
-      title = o["post_name"]
-      icon = view_context.image_path('maps/jobs.png')
-      o.attributes.merge(link: link, title: title, icon: icon)
-    end
-
-    respond_to do |f|
-      f.json do
-        render json: jobs
-      end
-    end
+    @jobs = Job.geocoded
   end
 
   def events
-    events = Event.select('id, title,latitude,longitude').geocoded.map! do|o|
-      link = user_url(o["id"])
-      title = o["title"]
-      icon = view_context.image_path('maps/events.png')
-      o.attributes.merge(link: link, title: title, icon: icon)
-    end
-
-    respond_to do |f|
-      f.json do
-        render json: events
-      end
-    end
+    @events = Event.geocoded
   end
 end

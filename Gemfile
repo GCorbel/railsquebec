@@ -50,6 +50,11 @@ group :test do
   gem 'launchy',            '2.1.2'
 end
 
+group :development do
+  gem 'better_errors',      '0.6.0'
+  gem 'binding_of_caller',  '0.7.1'
+end
+
 group :development, :test do
   gem 'pry', '0.9.8.4'
   gem 'pry-remote', '0.1.1'

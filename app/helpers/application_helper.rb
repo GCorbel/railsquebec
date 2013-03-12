@@ -22,4 +22,12 @@ module ApplicationHelper
   def excerpt(text)
     raw(truncate(sanitize(text), length: 200))
   end
+
+  def markdown(code)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                                       autolink: true,
+                                       no_intra_emphasis: true,
+                                       fenced_code_blocks: true)
+    markdown.render(code)
+  end
 end

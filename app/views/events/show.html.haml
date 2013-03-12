@@ -4,4 +4,4 @@
   %p= "Address : #{@event.street}, #{@event.postal_code}, #{@event.city}"
   - if @event.website.present?
     %p= "Website : " + raw(link_to(@event.website, @event.website))
-  %p= "Description : " + @event.description
+  %p= raw("Description : " + markdown(@event.description))

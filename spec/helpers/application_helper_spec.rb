@@ -49,4 +49,10 @@ describe ApplicationHelper do
       expect(excerpt(text)).to eq "This is a very very very long text. I just text the method to do an execrpt and it will cut this phrase because it's tooooooooooo long. Ho, it's raining today! Kevin is in the kitchen. Where is my ..."
     end
   end
+
+  describe :markdown do
+    it "convert a markdown to html" do
+      expect(helper.markdown("**test**")).to eq "<p><strong>test</strong></p>\n"
+    end
+  end
 end

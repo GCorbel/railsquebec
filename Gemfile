@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,7 +26,7 @@ group :assets do
 
   gem 'uglifier',     '>= 1.0.3'
   gem 'less-rails',   '2.2.6'
-  gem 'therubyracer', '0.11.3'
+  gem 'therubyracer', '0.11.4'
 end
 
 gem 'jquery-rails'
@@ -68,11 +68,12 @@ group :development, :test do
   gem 'pry-nav', '0.2.0'
 end
 
-gem 'devise',                   '2.2.3'
-gem 'inherited_resources',      '1.3.1'
-gem 'haml-rails',               '0.4'
-gem 'turbolinks',               '1.0.0'
-gem 'twitter-bootstrap-rails',  '2.1.9'
-gem 'simple_form',              '2.0.4'
-gem 'geocoder',                 '1.1.6'
-gem 'jbuilder',                 '1.0.2'
+gem 'devise',                                 '2.2.3'
+gem 'inherited_resources',                    '1.3.1'
+gem 'haml-rails',                             '0.4'
+gem 'turbolinks',                             '1.0.0'
+gem 'twitter-bootstrap-rails',                '2.1.9'
+gem 'simple_form',                            '2.0.4'
+gem 'simple_form_markdown_editor_bootstrap',  '0.0.2'
+gem 'geocoder',                               '1.1.6'
+gem 'jbuilder',                               '1.0.2'

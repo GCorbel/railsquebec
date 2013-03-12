@@ -3,5 +3,5 @@
   %p= "Date : " + @event.date.strftime("%Y-%m-%d")
   %p= "Address : #{@event.street}, #{@event.postal_code}, #{@event.city}"
   - if @event.website.present?
-    %p= "Website : " + raw(link_to(@event.website, @event.website))
+    %p= raw("Website : " + link_to(@event.website, @event.website))
   %p= raw("Description : " + markdown(@event.description))

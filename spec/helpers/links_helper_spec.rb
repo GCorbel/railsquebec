@@ -38,10 +38,20 @@ describe LinksHelper do
   end
 
   describe :form_actions_for do
-    it "show form actions" do
-      stub!(:link_for_edit).and_return("link_for_edit")
-      stub!(:link_for_delete).and_return("link_for_delete")
-      expect(form_actions_for(model)).to eq "<div class=\"form-actions\">link_for_editlink_for_delete</div>"
+    context "when the user can manage the model" do
+      it "show form actions" do
+        stub!(:can?).with(:manage, model).and_return(true)
+        stub!(:link_for_edit).and_return("link_for_edit")
+        stub!(:link_for_delete).and_return("link_for_delete")
+        expect(form_actions_for(model)).to eq "<div class=\"form-actions\">link_for_editlink_for_delete</div>"
+      end
+    end
+
+    context "when the user cannot manage the model"  do
+      it "return nil" do
+        stub!(:can?).with(:manage, model).and_return(false)
+        expect(form_actions_for(model)).to be_nil
+      end
     end
   end
 end

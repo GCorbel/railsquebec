@@ -16,10 +16,12 @@ module LinksHelper
   end
 
   def form_actions_for(model)
-    link_for_edit = link_for_edit(model) || ""
-    link_for_delete = link_for_delete(model) || ""
-   content_tag(:div, class: "form-actions") do
-     link_for_edit + link_for_delete
-   end
+    if can?(:manage, model)
+      link_for_edit = link_for_edit(model) || ""
+      link_for_delete = link_for_delete(model) || ""
+      content_tag(:div, class: "form-actions") do
+        link_for_edit + link_for_delete
+      end
+    end
   end
 end

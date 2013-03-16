@@ -1,15 +1,3 @@
 .well
   %h2 Add a Job
-  = simple_form_for @job do |f|
-    %fieldset
-      .jobFormLeft
-        = f.input :post_name
-        = f.input :company_name
-        = f.input :email
-        = f.input :website
-      .jobFormRight
-        = f.input :city
-        = f.input :street
-        = f.input :postal_code
-    = f.input :description, as: :markdown
-    = f.button :submit, "Submit"
+  =render "form"

@@ -1,6 +1,5 @@
 class JobsController < InheritedResources::Base
-  protected
-    def begin_of_association_chain
-      current_user
-    end
+  def create
+    respond_with(JobCreator.new(current_user, params[:job]).execute)
+  end
 end

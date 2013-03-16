@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :job do |f|
+    association   :user
     company_name  "Company Name"
     email         "Comp@domain.com"
     website       "http://domain.com"

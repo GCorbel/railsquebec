@@ -14,6 +14,7 @@ feature "Events" do
   end
 
   scenario "Create a new event" do
+    sign_in event.user
     visit new_event_path
     fill_form
     expect(page).to have_content("Event was successfully created")

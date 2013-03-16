@@ -28,6 +28,14 @@ feature "Jobs" do
     expect(page).to have_content("Job was successfully updated")
     expect(page).to have_content("Post Name")
   end
+
+  scenario "Delete an job" do
+    sign_in job.user
+    visit job_path(job)
+    click_on "Delete"
+    expect(page).to have_content("Job was successfully destroyed")
+    expect(page).to_not have_content("Post Name")
+  end
 end
 
 def fill_form

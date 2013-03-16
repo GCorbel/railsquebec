@@ -36,4 +36,12 @@ describe LinksHelper do
       end
     end
   end
+
+  describe :form_actions_for do
+    it "show form actions" do
+      stub!(:link_for_edit).and_return("link_for_edit")
+      stub!(:link_for_delete).and_return("link_for_delete")
+      expect(form_actions_for(model)).to eq "<div class=\"form-actions\">link_for_editlink_for_delete</div>"
+    end
+  end
 end

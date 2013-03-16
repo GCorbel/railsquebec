@@ -11,7 +11,7 @@ module LinksHelper
 
   def link_for_edit(model)
     if can?(:update,model)
-      link_to "edit", model
+      link_to "Edit", edit_polymorphic_path(model), class: 'btn'
     end
   end
 end

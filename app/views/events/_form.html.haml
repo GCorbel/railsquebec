@@ -1,0 +1,9 @@
+= simple_form_for @event do |f|
+  = f.input :title
+  = f.input :date
+  = f.input :website
+  = f.input :street
+  = f.input :postal_code
+  = f.input :city
+  = f.input :description, as: :markdown
+  = f.button :submit, "Submit"

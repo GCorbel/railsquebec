@@ -6,4 +6,5 @@
     %p= raw("Website : " + link_to(@event.website, @event.website))
   %p= raw("Description : " + markdown(@event.description))
   .form-actions
+    =link_for_edit(@event)
     =link_for_delete(@event)

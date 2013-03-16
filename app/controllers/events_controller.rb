@@ -1,6 +1,5 @@
 class EventsController < InheritedResources::Base
-  protected
-    def begin_of_association_chain
-      current_user
-    end
+  def create
+    respond_with(EventCreator.new(current_user, params[:event]).execute)
+  end
 end

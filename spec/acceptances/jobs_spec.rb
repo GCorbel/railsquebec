@@ -16,7 +16,7 @@ feature "Jobs" do
   scenario "Create a new job" do
     sign_in job.user
     visit new_job_path
-    fill_form
+    fill_job_form
     expect(page).to have_content("Job was successfully created")
     expect(page).to have_content("Post Name")
   end
@@ -24,7 +24,7 @@ feature "Jobs" do
   scenario "Edit a job" do
     sign_in job.user
     visit edit_job_path(job)
-    fill_form
+    fill_job_form
     expect(page).to have_content("Job was successfully updated")
     expect(page).to have_content("Post Name")
   end
@@ -38,7 +38,7 @@ feature "Jobs" do
   end
 end
 
-def fill_form
+def fill_job_form
   fill_in "Post name", with: "Post Name"
   fill_in "Company name", with: "Company Name"
   fill_in "Email", with: "guirec.corbel@gmail.com"

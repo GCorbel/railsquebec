@@ -16,7 +16,7 @@ feature "Events" do
   scenario "Create a new event" do
     sign_in event.user
     visit new_event_path
-    fill_form
+    fill_event_form
     expect(page).to have_content("Event was successfully created")
     expect(page).to have_content("Event title")
   end
@@ -24,7 +24,7 @@ feature "Events" do
   scenario "Edit an event" do
     sign_in event.user
     visit edit_event_path(event)
-    fill_form
+    fill_event_form
     expect(page).to have_content("Event was successfully updated")
     expect(page).to have_content("Event title")
   end
@@ -38,7 +38,7 @@ feature "Events" do
   end
 end
 
-def fill_form
+def fill_event_form
   fill_in "Title",       with: "Event title"
   fill_in "Street",      with: "A street"
   fill_in "Postal code", with: "A1B2C3"

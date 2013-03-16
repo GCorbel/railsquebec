@@ -3,6 +3,8 @@ require 'spec_helper'
 describe User do
   subject(:user) { build(:user) }
 
+  it { should have_many(:events) }
+
   it { should validate_uniqueness_of(:email) }
   it { should validate_uniqueness_of(:username) }
 

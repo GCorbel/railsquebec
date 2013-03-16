@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130309232327) do
 
   create_table "events", :force => true do |t|
+    t.integer  "user_id",     :null => false
     t.string   "title",       :null => false
     t.date     "date",        :null => false
     t.string   "website"
@@ -26,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20130309232327) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  add_index "events", ["user_id"], :name => "index_events_on_user_id"
 
   create_table "jobs", :force => true do |t|
     t.string   "company_name"

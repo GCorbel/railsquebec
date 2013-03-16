@@ -24,4 +24,12 @@ feature "Events" do
     expect(page).to have_content("Event was successfully created")
     expect(page).to have_content("Event title")
   end
+
+  scenario "Delete an event" do
+    sign_in event.user
+    visit event_path(event)
+    click_on "Delete"
+    expect(page).to have_content("Event was successfully destroyed")
+    expect(page).to_not have_content("Event title")
+  end
 end

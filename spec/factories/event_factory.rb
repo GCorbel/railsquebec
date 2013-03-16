@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :event do |f|
+    association   :user
     title         "Title"
     date          Time.now
     website       "http://domain.com"

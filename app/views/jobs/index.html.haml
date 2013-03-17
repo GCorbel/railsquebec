@@ -1,3 +1,4 @@
-.well
-  = link_to "Add a new job", new_job_path, class: "btn"
+- if can?(:create, Job)
+  .well
+    = link_to "Add a new job", new_job_path, class: "btn"
 = render @jobs

@@ -1,12 +1,17 @@
-.well
-  %h2 Sign in
-  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    = f.input :email, autofocus: true
-    = f.input :password
-    - if devise_mapping.rememberable?
-      = f.input :remember_me,
-        inline_label: 'Remember me',
-        as: :boolean,
-        label: false
-    %div= f.submit "Sign in"
-  = render "devise/shared/links"
+.logreg
+  .row
+    .span12
+      .signin-page
+        %h3
+          Sign In
+        %hr/
+        = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = f.input :email, autofocus: true
+          = f.input :password
+          - if devise_mapping.rememberable?
+            = f.input :remember_me,
+              inline_label: 'Remember me',
+              as: :boolean,
+              label: false
+          = f.button :submit, "Sign in"
+        = render "devise/shared/links"

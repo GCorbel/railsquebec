@@ -1,4 +1,6 @@
-.well
-  %h1 Membre list
-  %ul.userList.theContentList
-    = render @users
+.hero
+  %h3
+    %span
+      Membre list
+- @users.each_with_index do |user, index|
+  =render user

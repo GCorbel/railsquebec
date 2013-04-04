@@ -1,22 +1,28 @@
-.well
-  %h2 Sign up
-  = simple_form_for(resource,
-      as: resource_name,
-      url: registration_path(resource_name)) do |f|
-    %fieldset
-      .registrationFormLeft
-        = f.input :email, autofocus: true
-        = f.input :username
-        = f.input :email_visible,
-          inline_label: 'Allow other persons to view my email',
-          label: false
-        = f.input :twitter
-        = f.input :github
-      .registrationFormRight
-        = f.input :street
-        = f.input :city
-        = f.input :postal_code
-        = f.input :password
-        = f.input :password_confirmation
-    = f.button :submit, "Sign up"
-  = render "devise/shared/links"
+.logreg
+  .row
+    .span12
+      .logreg-page
+        %h3
+          Sign Up
+        %hr/
+        .form
+          = simple_form_for(resource,
+              as: resource_name,
+              url: registration_path(resource_name)) do |f|
+            %fieldset
+              .registrationFormLeft
+                = f.input :email, autofocus: true
+                = f.input :username
+                = f.input :email_visible,
+                  inline_label: 'Allow other persons to view my email',
+                  label: false
+                = f.input :twitter
+                = f.input :github
+              .registrationFormRight
+                = f.input :street
+                = f.input :city
+                = f.input :postal_code
+                = f.input :password
+                = f.input :password_confirmation
+            = f.button :submit, "Sign up"
+          = render "devise/shared/links"

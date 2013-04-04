@@ -1,0 +1,19 @@
+= editable(@page) { @page.body }
+.bor
+.main-content
+  .row
+    .span4
+      .main-box
+        %h4 Events
+        - EventPresenter.latest(5).each do |event|
+          %p= link_to event.title, event
+    .span4
+      .main-box
+        %h4 Jobs
+        - JobPresenter.latest(5).each do |job|
+          %p= link_to job.post_name, job
+    .span4
+      .main-box
+        %h4 Members
+        - UserPresenter.latest(5).each do |user|
+          %p= link_to user

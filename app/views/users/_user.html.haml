@@ -1,8 +1,7 @@
-%li
-  .well
-    = raw(link_to(image_tag(avatar_url(user, 40)), user))
-    .userInformations
-      %p= link_to(user, user)
-      %p= link_to(user.email, user) if user.email_visible?
-      %p= link_to(user.twitter, user) if user.twitter.present?
-      %p= link_to(user.github, user) if user.github.present?
+.span2.serv
+  = raw(link_to(image_tag(avatar_url(user, 40)), user))
+  .userInformations
+    %p= link_to(user, user)
+    %p= link_to(user.email, user) if user.email_visible?
+    %p= link_to(user.twitter, user) if user.twitter.present?
+    %p= link_to(user.github, user) if user.github.present?

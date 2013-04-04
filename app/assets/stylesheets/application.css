@@ -11,14 +11,10 @@
  *= require_self
  *= require_tree .
  *= require markdown
+ *= require minimalist_cms/minimalist_cms
  */
 .simple_form div {
   vertical-align: top;
-}
-
-body {
-  background-image: url(http://upload.wikimedia.org/wikipedia/commons/2/2c/Lac_Achard,_Is%C3%A8re.jpg);
-  background-size: cover;
 }
 
 textarea.markdown {

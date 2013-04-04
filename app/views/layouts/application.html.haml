@@ -1,3 +1,4 @@
+
 !!! 5
 %html(lang="en")
   %head
@@ -18,15 +19,26 @@
 
 
   %body
-    .navbar.navbar-fluid-top
+    / Header starts
+    %header
+      .container
+        .row
+          .span4
+            / Logo and site link
+            .logo
+              %h1
+                %a{:href => "/"}
+                  RailsQuebec
+                  %span.color .
+    / Header ends
+    / Navigation Starts
+    / Note down the syntax before editing. It is the default twitter bootstrap navigation
+    .navbar
       .navbar-inner
-        .container-fluid
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand(href="/") RailsQuebec
-          .container.nav-collapse
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            Menu
+          .nav-collapse.collapse
             %ul.nav
               %li= link_to "Events",  events_path
               %li= link_to "Jobs",    jobs_path
@@ -45,33 +57,24 @@
                         data: { confirm: "Are you sure?" }
               -else
                 %li= link_to "Log In", new_user_session_path
-                %li= link_to "Sign In", new_user_registration_path
-
-    .container-fluid
-
-      .row-fluid
-        .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Latest events
-              - EventPresenter.latest(5).each do |event|
-                %li= link_to event.title, event
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Latest jobs
-              - JobPresenter.latest(5).each do |job|
-                %li= link_to job.post_name, job
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Latest members
-              - UserPresenter.latest(5).each do |user|
-                %li= link_to user
-        .span9
-          = alert_box("success", flash[:notice])
-          = alert_box("error", flash[:error])
-          = alert_box("alert", flash[:alert])
-          = yield
-
-      %footer
-        %p &copy; RailsQuebec 2013
+                %li= link_to "Sign Up", new_user_registration_path
+    / Navigation Ends
+    / Content strats
+    .content
+      .container
+        .row
+          .span12
+            =yield
+    / Content ends
+    / Footer
+    %footer
+      .container
+        .row
+          .span12
+            %p.copy
+              / Copyright information. You can remove my site link.
+              Copyright &copy;
+              %a{:href => "#"} Your Site
+              | Designed by
+              %a{:href => "http://responsivewebinc.com"} Responsive Web Design
     = javascript_include_tag "application"

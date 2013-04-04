@@ -1,6 +1,15 @@
-.well
-  %p= "Event name : " + event.title
-  %p= "Date : " + event.date.strftime("%Y-%m-%d")
-  %p= "City : " + event.city
-  %p= raw("Description : " + markdown(excerpt(event.description)))
-  = link_to "Read more...", event
+.accordion-group
+  .accordion-heading
+    %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse#{event.id}"}
+      %h5
+        =event.title
+    %div{:id => "collapse#{event.id}", class: "accordion-body collapse"}
+      .accordion-inner
+        / Para
+        %span
+          %i.icon-calendar
+          = "Date : " + event.date.strftime("%Y-%m-%d")
+          %i.icon-home
+          = "Location : " + event.city
+        %p= raw("Description : " + markdown(excerpt(event.description)))
+        = link_to "Read more...", event

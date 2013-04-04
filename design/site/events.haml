@@ -1,0 +1,367 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    / Title
+    %title Events Page - Ericka
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    / Description, Keywords
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "keywords"}/
+    %meta{:content => "", :name => "author"}/
+    / Google web fonts
+    %link{:href => "http://fonts.googleapis.com/css?family=Oswald:400,700", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic", :rel => "stylesheet", :type => "text/css"}/
+    / Stylesheets
+    %link{:href => "style/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "style/flexslider.css", :rel => "stylesheet"}/
+    %link{:href => "style/prettyPhoto.css", :rel => "stylesheet"}/
+    %link{:href => "style/font-awesome.css", :rel => "stylesheet"}/
+    /[if IE 7]
+      <link rel="stylesheet" href="style/font-awesome-ie7.css">
+    %link{:href => "style/style.css", :rel => "stylesheet"}/
+    / Color Stylesheet - orange, blue, pink, brown, red or green
+    %link{:href => "style/blue.css", :rel => "stylesheet"}/
+    %link{:href => "style/bootstrap-responsive.css", :rel => "stylesheet"}/
+    / HTML5 Support for IE
+    /[if lt IE 9]
+      <script src="js/html5shim.js"></script>
+    / Favicon
+    %link{:href => "img/favicon/favicon.png", :rel => "shortcut icon"}/
+  %body
+    / Header starts
+    %header
+      .container
+        .row
+          .span4
+            / Logo and site link
+            .logo
+              %h1
+                %a{:href => "index.html"}
+                  Ericka
+                  %span.color .
+          .span4.offset4
+            .list
+              / Add your phone number here
+              .phone
+                %i.icon-phone
+                Phone: 123-456-7890
+              %hr/
+              / Add your email id here
+              .email
+                %i.icon-envelope-alt
+                Email: someting@gmail.com
+              %hr/
+              / Add your address here
+              .address
+                %i.icon-home
+                Address: 12, Srtington Street, NY, USA
+    / Header ends
+    / Navigation Starts
+    .navbar
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            Menu
+          .nav-collapse.collapse
+            / Navigation links starts here
+            %ul.nav
+              / Main menu
+              %li
+                %a{:href => "index.html"} Home #1
+              %li
+                %a{:href => "index1.html"} Home #2
+              / Navigation with sub menu. Please note down the syntax before you need. Each and every link is important.
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Pages #1
+                  %b.caret
+                / Submenus
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "support.html"} Support
+                  %li
+                    %a{:href => "products.html"} Products
+                  %li
+                    %a{:href => "register.html"} Register
+                  %li
+                    %a{:href => "login.html"} Login
+                  %li
+                    %a{:href => "about.html"} About
+                  %li
+                    %a{:href => "service.html"} Service #1
+                  %li
+                    %a{:href => "service1.html"} Service #2
+                  %li
+                    %a{:href => "pricing.html"} Pricing Table
+                  %li
+                    %a{:href => "careers.html"} Careers
+                  %li
+                    %a{:href => "faq.html"} FAQ
+                  %li
+                    %a{:href => "team.html"} Team
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Pages #2
+                  %b.caret
+                / Submenus
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "404.html"} 404
+                  %li
+                    %a{:href => "comingsoon.html"} Coming Soon
+                  %li
+                    %a{:href => "resume.html"} Resume
+                  %li
+                    %a{:href => "sitemap.html"} Sitemap
+                  %li
+                    %a{:href => "process.html"} Process
+                  %li
+                    %a{:href => "testimonials.html"} Testimonials
+                  %li
+                    %a{:href => "review.html"} Review
+                  %li
+                    %a{:href => "project.html"} Project
+                  %li
+                    %a{:href => "timeline.html"} Timeline
+                  %li
+                    %a{:href => "full-width.html"} Full Width
+                  %li
+                    %a{:href => "events.html"} Events
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Blog
+                  %b.caret
+                / Submenus
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "blog.html"} Blog Main #1
+                  %li
+                    %a{:href => "blog1.html"} Blog Main #2
+                  %li
+                    %a{:href => "blog2.html"} Blog Main #3
+                  %li
+                    %a{:href => "blog-ls.html"} Blog Left Sidebar
+                  %li
+                    %a{:href => "blog-ns.html"} Blog No Sidebar
+                  %li
+                    %a{:href => "blog-single.html"} Blog Single
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Features
+                  %b.caret
+                / Submenus
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "features.html"} Features #1
+                  %li
+                    %a{:href => "features1.html"} Features #2
+                  %li
+                    %a{:href => "features2.html"} Features #3
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Portfolio
+                  %b.caret
+                / Submenus
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "gallery.html"} Gallery
+                  %li
+                    %a{:href => "portfolio1.html"} Portfolio #1
+                  %li
+                    %a{:href => "portfolio2.html"} Portfolio #2
+                  %li
+                    %a{:href => "portfolio.html"} Portfolio #3
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Contact
+                  %b.caret
+                / Submenus
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "contact.html"} Contact #1
+                  %li
+                    %a{:href => "contact1.html"} Contact #2
+                  %li
+                    %a{:href => "clients.html"} Clients
+    / Navigation Ends
+    / Content strats
+    .content
+      .container
+        .row
+          .span12
+            / Events starts
+            .events
+              .row
+                .span12
+                  / Events hero
+                  .hero
+                    / Title. Don't forget the <span> tag
+                    %h3
+                      %span Events
+                    / para
+                    %p Praesent at tellus porttitor nisl porttitor sagittis. Mauris in massa ligula, a tempor nulla. Ut tempus interdum mauris vel vehicula. Nulla ullamcorper tortor commodo in sagittis est accumsan.
+                  / Events
+                  #accordion2.accordion
+                    / Each item should be enclosed inside the class "accordion-group". Note down the below markup.
+                    / First Accordion
+                    .accordion-group
+                      .accordion-heading
+                        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                          / Title.
+                        %h5
+                          Proin porttitor eros a ante molestie gravida ?
+                          %span In vitae adipiscing enim
+                      #collapseOne.accordion-body.collapse.in
+                        .accordion-inner
+                          / Para
+                          %span
+                            %i.icon-calendar
+                            Date : 26/23/2012 -
+                            %i.icon-home
+                            Location : New York
+                          %p
+                            Proin porttitor eros a ante molestie gravida commodo dui adipiscing.
+                            %a{:href => "#"} Morbi dictum nibh gravida
+                            mi pretium dapibus. Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. Sed a interdum mauris.
+                    / Second Accordion
+                    .accordion-group
+                      .accordion-heading
+                        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                        %h5
+                          Proin porttitor eorbi dictum nibh gravida ?
+                          %span In vitae adipiscing enim
+                      #collapseTwo.accordion-body.collapse
+                        .accordion-inner
+                          %span
+                            %i.icon-calendar
+                            Date : 26/23/2012 -
+                            %i.icon-home
+                            Location : New York
+                          %p
+                            Proin porttitor eros a ante molestie gravida commodo dui adipiscing.
+                            %a{:href => "#"} Morbi dictum nibh gravida
+                            mi pretium dapibus. Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. Sed a interdum mauris.
+                    / Thrid accordion
+                    .accordion-group
+                      .accordion-heading
+                        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+                        %h5
+                          In vitae adipiscing adipiscing enim gravida ?
+                          %span In vitae adipiscing enim
+                      #collapseThree.accordion-body.collapse
+                        .accordion-inner
+                          %span
+                            %i.icon-calendar
+                            Date : 26/23/2012 -
+                            %i.icon-home
+                            Location : New York
+                          %p
+                            Proin porttitor eros a ante molestie gravida commodo dui adipiscing.
+                            %a{:href => "#"} Morbi dictum nibh gravida
+                            mi pretium dapibus. Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. Sed a interdum mauris.
+                    / Fourth accordion
+                    .accordion-group
+                      .accordion-heading
+                        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFour"}
+                        %h5
+                          Sed a interdum mauris molestie gravida ?
+                          %span In vitae adipiscing enim
+                      #collapseFour.accordion-body.collapse
+                        .accordion-inner
+                          %span
+                            %i.icon-calendar
+                            Date : 26/23/2012 -
+                            %i.icon-home
+                            Location : New York
+                          %p
+                            Proin porttitor eros a ante molestie gravida commodo dui adipiscing.
+                            %a{:href => "#"} Morbi dictum nibh gravida
+                            mi pretium dapibus. Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. Sed a interdum mauris.
+                    / Fifth accordion
+                    .accordion-group
+                      .accordion-heading
+                        %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseFive"}
+                        %h5
+                          Nullam in urna est urna molestie gravida ?
+                          %span In vitae adipiscing enim
+                      #collapseFive.accordion-body.collapse
+                        .accordion-inner
+                          %span
+                            %i.icon-calendar
+                            Date : 26/23/2012 -
+                            %i.icon-home
+                            Location : New York
+                          %p
+                            Proin porttitor eros a ante molestie gravida commodo dui adipiscing.
+                            %a{:href => "#"} Morbi dictum nibh gravida
+                            mi pretium dapibus. Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. Sed a interdum mauris.
+            / Events ends
+            / CTA starts
+            .cta
+              .row
+                .span9
+                  / First line
+                  %p.cbig Lorem ipsum consectetur dolor sit amet, consectetur adipiscing.
+                  / Second line
+                  %p.csmall Duis vulputate consectetur malesuada eros nec odio consect eturegestas et netus et in dictum nisi vehicula.
+                .span2
+                  / Button
+                  .button
+                    %a{:href => "#"} Get A Free Trail
+            / CTA Ends
+    / Content ends
+    / Footer
+    %footer
+      .container
+        .row
+          .span4
+            / Widget 1
+            .widget
+              %h4 Twitter
+              / Too add twitter widget, goto "js" folder and open "custom.js" file and search for the word "ashokramesh90". This is my twitter username. Just replace the word with your twitter username. You are done.
+              .tweet
+          .span4
+            / Widget 2
+            .widget
+              %h4 Recent Posts
+              %ul
+                %li
+                  %a{:href => "#"} Sed eu leo orci, in rhoncus puru condimentum gravida metus
+                %li
+                  %a{:href => "#"} Etiam at in rhoncus puru nulla ipsum, in rhoncus purus
+                %li
+                  %a{:href => "#"} Fusce vel magnain rhoncus puru faucibus felis dapibus facilisis
+          .span4
+            / Widget 3
+            .widget
+              %h4 Categories
+              %ul
+                %li
+                  %a{:href => "#"} Condimentum
+                %li
+                  %a{:href => "#"} Etiam at
+                %li
+                  %a{:href => "#"} Fusce vel
+                %li
+                  %a{:href => "#"} Vivamus
+                %li
+                  %a{:href => "#"} Pellentesque
+          .span12
+            %hr/
+            %p.copy
+              / Copyright information. You can remove my site link.
+              Copyright &copy;
+              %a{:href => "#"} Your Site
+              | Designed by
+              %a{:href => "http://responsivewebinc.com"} Responsive Web Design
+    / JS
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}
+    %script{:src => "js/jquery.flexslider-min.js"}
+    %script{:src => "js/jquery.isotope.js"}
+    %script{:src => "js/jquery.prettyPhoto.js"}
+    %script{:src => "js/filter.js"}
+    %script{:src => "js/jquery.tweet.js"}
+    %script{:src => "js/custom.js"}

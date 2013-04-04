@@ -1,4 +1,11 @@
-- if can?(:create, Event)
-  .well
-    = link_to "Add a new event", new_event_path, class: "btn"
-= render @events
+.events
+  .row
+    .span12
+      .hero
+        %h3
+          %span Events
+      - if can?(:create, Event)
+        .well
+          = link_to "Add a new event", new_event_path, class: "btn"
+      #accordion2.accordion
+        =render @events

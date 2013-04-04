@@ -5,7 +5,7 @@ describe JobsController do
     it "create a job" do
       params = {}
       job_creator = stub
-      user = stub
+      user = build_stubbed(:user)
       job = build_stubbed(:job)
 
       sign_in user

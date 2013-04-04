@@ -5,7 +5,7 @@ describe EventsController do
     it "create a job" do
       params = {}
       event_creator = stub
-      user = stub
+      user = build_stubbed(:user)
       event = build_stubbed(:event)
 
       sign_in user

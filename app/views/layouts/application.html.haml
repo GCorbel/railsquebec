@@ -30,9 +30,7 @@
             / Logo and site link
             .logo
               %h1
-                %a{:href => "/"}
-                  RailsQuebec
-                  %span.color .
+                %a{:href => "/"} RailsQuebec<span class="color">.</a>
     / Header ends
     / Navigation Starts
     / Note down the syntax before editing. It is the default twitter bootstrap navigation
@@ -67,6 +65,9 @@
       .container
         .row
           .span12
+            = alert_box("success", flash[:notice])
+            = alert_box("error", flash[:error])
+            = alert_box("alert", flash[:alert])
             =yield
     / Content ends
     / Footer
@@ -76,7 +77,6 @@
           .span12
             %p.copy
               / Copyright information. You can remove my site link.
-              Copyright &copy;
-              %a{:href => "#"} Your Site
+              Copyright &copy;/RailsQuebec
               | Designed by
               %a{:href => "http://responsivewebinc.com"} Responsive Web Design

@@ -32,7 +32,9 @@ feature "Events" do
   scenario "Delete an event" do
     sign_in event.user
     visit event_path(event)
-    click_on "Delete"
+    within(".form-actions") do
+      click_on "Delete"
+    end
     expect(page).to have_content("Event was successfully destroyed")
     expect(page).to_not have_content("Event title")
   end

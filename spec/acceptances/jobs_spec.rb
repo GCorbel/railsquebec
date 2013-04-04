@@ -32,7 +32,9 @@ feature "Jobs" do
   scenario "Delete an job" do
     sign_in job.user
     visit job_path(job)
-    click_on "Delete"
+    within(".form-actions") do
+      click_on "Delete"
+    end
     expect(page).to have_content("Job was successfully destroyed")
     expect(page).to_not have_content("Post Name")
   end

@@ -6,5 +6,5 @@
       .rinfo
         %h5= job.company_name
         .rmeta= job.created_at.strftime("%Y-%m-%d")
-        %p= raw("Description : " +  markdown(excerpt(job.description)))
+        %p= raw(markdown(excerpt(job.description)))
         = link_to "Read more...", job

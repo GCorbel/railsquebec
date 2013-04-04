@@ -11,5 +11,5 @@
           = "Date : " + event.date.strftime("%Y-%m-%d")
           %i.icon-home
           = "Location : " + event.city
-        %p= raw("Description : " + markdown(excerpt(event.description)))
+        %p= raw(markdown(excerpt(event.description)))
         = link_to "Read more...", event

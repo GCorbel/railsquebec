@@ -47,7 +47,6 @@ gem 'jquery-rails'
 # gem 'debugger'
 group :test do
   gem 'rspec-rails',        '2.12.2'
-  gem 'spork-rails',        '3.2.1'
   gem 'capybara',           '2.0.2'
   gem 'capybara-firebug',   '1.3.0'
   gem 'capybara-webkit',    '0.14.1'
@@ -66,6 +65,9 @@ group :development, :test do
   gem 'pry', '0.9.8.4'
   gem 'pry-remote', '0.1.1'
   gem 'pry-nav', '0.2.0'
+
+  gem 'listen'
+  gem 'rb-inotify', require: false
 end
 
 gem 'devise',                                 '2.2.3'

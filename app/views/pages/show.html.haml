@@ -16,4 +16,4 @@
       .main-box
         %h4 Members
         - UserPresenter.latest(5).each do |user|
-          %p= link_to user
+          %p= link_to user.username, user

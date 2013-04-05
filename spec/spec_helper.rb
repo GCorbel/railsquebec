@@ -1,10 +1,11 @@
 require 'rubygems'
-Spring.watch "#{Rails.root}/spec/factories"
-ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rails'
+
+Spring.watch "#{Rails.root}/spec/factories"
+ENV["RAILS_ENV"] ||= 'test'
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 

@@ -7,13 +7,16 @@
         %h4 Events
         - EventPresenter.latest(5).each do |event|
           %p= link_to event.title, event
+        .link_index= link_to "... view all events", events_path
     .span4
       .main-box
         %h4 Jobs
         - JobPresenter.latest(5).each do |job|
           %p= link_to job.post_name, job
+        .link_index= link_to "... view all jobs", jobs_path
     .span4
       .main-box
         %h4 Members
         - UserPresenter.latest(5).each do |user|
           %p= link_to user.username, user
+        .link_index= link_to "... view all users", users_path

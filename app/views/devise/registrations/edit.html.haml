@@ -21,7 +21,7 @@
               = f.input :street
               = f.input :city
               = f.input :postal_code
-              %i (leave blank if you don't want to change it)
+              %i= t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it")
               = f.input :password
               = f.input :password_confirmation
           = f.button :submit, "Update"

@@ -8,8 +8,8 @@
         / Para
         %span
           %i.icon-calendar
-          = "Date : " + event.date.strftime("%Y-%m-%d")
+          = t('.date', date: event.date.strftime("%Y-%m-%d"))
           %i.icon-home
-          = "Location : " + event.city
+          = t('.location', city: event.city)
         %p= raw(markdown(excerpt(event.description)))
-        = link_to "Read more...", event
+        = link_to t('shared.read_more'), event

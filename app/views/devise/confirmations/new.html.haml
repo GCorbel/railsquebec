@@ -2,11 +2,8 @@
   .row
     .span12
       .logreg-page
-        %h3 Resend confirmation instructions
-        = simple_form_for(resource,
-            as: resource_name,
-            url: confirmation_path(resource_name),
-            html: { method: :post }) do |f|
+        %h3= t('.resend_confirmation_instructions', :default => 'Resend confirmation instructions')
+        = simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f|
           = f.input :email
-          = f.button :submit, "Resend confirmation instructions"
+          = f.button :submit, t('.resend_confirmation_instructions', :default => 'Resend confirmation instructions')
         = render "devise/shared/links"

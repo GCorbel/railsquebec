@@ -1,10 +1,13 @@
 .well
   %h1= @job.post_name
-  %p= "Company name : " + @job.company_name
-  %p= raw("Email : " + link_to(@job.email, "mailto:#{@job.email}"))
-  %p= "Address : #{@job.street}, #{@job.postal_code}, #{@job.city}"
+  %p= t('.company_name', company: @job.company_name)
+  %p= raw(t('.email', link: link_to(@job.email, "mailto:#{@job.email}")))
+  %p= t('.address',
+          street: @job.street,
+          postal_code: @job.postal_code,
+          city: @job.city)
   - if @job.website.present?
-    %p= raw("Website : " + link_to(@job.website, @job.website))
-  %p= raw("Description : " + markdown(@job.description))
-  %p= "Creation date : " + @job.created_at.strftime("%Y-%m-%d")
+    %p= raw(t('.website', link: link_to(@job.website, @job.website)))
+  %p= raw(markdown(@job.description))
+  %p= t('.creation_date', date: @job.created_at.strftime("%Y-%m-%d"))
   =form_actions_for(@job)

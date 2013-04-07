@@ -2,8 +2,7 @@
   .row
     .span12
       .logreg-page
-        %h3
-          Sign Up
+        %h3= t('.sign_up', :default => "Sign up")
         %hr/
         .form
           = simple_form_for(resource,
@@ -14,7 +13,7 @@
                 = f.input :email, autofocus: true
                 = f.input :username
                 = f.input :email_visible,
-                  inline_label: 'Allow other persons to view my email',
+                  inline_label: t('.allow_to_view_email'),
                   label: false
                 = f.input :twitter
                 = f.input :github
@@ -25,4 +24,5 @@
                 = f.input :password
                 = f.input :password_confirmation
             = f.button :submit, "Sign up"
+            = f.button :submit, t('.sign_up', :default => "Sign up")
           = render "devise/shared/links"

@@ -3,9 +3,9 @@
     .span12
       .hero
         %h3
-          %span Events
+          %span= t('shared.events')
       - if can?(:create, Event)
         .well
-          = link_to "Add a new event", new_event_path, class: "btn"
+          = link_to t('.add_new'), new_event_path, class: "btn"
       #accordion2.accordion
         =render @events

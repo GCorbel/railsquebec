@@ -2,4 +2,58 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  shared:
+    events: Events
+    jobs: Jobs
+    users: Members
+    map: Map
+    are_you_sure: Are you sure?
+    submit: Submit
+    read_more: Read more...
+  layouts:
+    application:
+      sign_out: Sign out
+      sign_in: Sign in
+      sign_up: Sign up
+      edit_account: Edit my account
+      delete_account: Delete my account
+  events:
+    event:
+      date: "Date : %{date}"
+      location: "Location : %{city}"
+    edit:
+      edit_event: Edit an event
+    index:
+      add_new: Add a new event
+    new:
+      add_new_event: Add a new event
+    show:
+      date: "Date : %{date}"
+      address: "Address : %{street}, %{postal_code}, %{city}"
+      website: "Website : %{link}"
+      description: "Description : %{description}"
+  jobs:
+    edit:
+      edit_job: Edit a job
+    index:
+      add_new: Add a new job
+    new:
+      add_new_job: Add a new job
+    show:
+      company_name: "Company name : %{company}"
+      email: "Email : %{link}"
+      address: "Address : %{street}, %{postal_code}, %{city}"
+      website: "Website : %{link}"
+      creation_date: "Creation date : %{date}"
+  pages:
+    show:
+     view_all_events: ... view all events
+     view_all_jobs: ... view all jobs
+     view_all_users: ... view all members
+  users:
+    index:
+      member_list: Member list
+    show:
+      username: "Username : %{username}"
+      city: "City : %{city}"
+      registration_date: "Registration date : %{date}"

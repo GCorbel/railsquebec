@@ -1,8 +1,11 @@
 .well
   %h1= @event
-  %p= "Date : " + @event.date.strftime("%Y-%m-%d")
-  %p= "Address : #{@event.street}, #{@event.postal_code}, #{@event.city}"
+  %p= t('.date', date: @event.date.strftime("%Y-%m-%d"))
+  %p= t('.address',
+          street: @event.street,
+          postal_code: @event.postal_code,
+          city: @event.city)
   - if @event.website.present?
-    %p= raw("Website : " + link_to(@event.website, @event.website))
-  %p= raw("Description : " + markdown(@event.description))
+    %p= raw(t('.website', link: link_to(@event.website, @event.website)))
+  %p= raw(t('.description', description: markdown(@event.description)))
   =form_actions_for(@event)

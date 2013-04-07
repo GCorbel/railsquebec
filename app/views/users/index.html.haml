@@ -1,6 +1,5 @@
 .hero
   %h3
-    %span
-      Membre list
+    %span= t('.member_list')
 - @users.each_with_index do |user, index|
   =render user

@@ -1,18 +1,21 @@
 Railsquebec::Application.routes.draw do
-  get "jobs/index"
+  scope "(:locale)", locale: /en|fr/ do
+    get "jobs/index"
 
-  get "maps/index"
+    get "maps/index"
 
-  devise_for :users
+    devise_for :users
 
-  resources :users
-  resources :jobs
-  resources :events
-  resources :maps, only: [:index] do
-    collection do
-      get :users
-      get :jobs
-      get :events
+    resources :users
+    resources :jobs
+    resources :events
+    resources :groups, only: :index
+    resources :maps, only: [:index] do
+      collection do
+        get :users
+        get :jobs
+        get :events
+      end
     end
   end
 

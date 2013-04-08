@@ -32,6 +32,24 @@
             .logo
               %h1
                 %a{:href => "/"} RailsQuebec<span class="color">.</a>
+          .span4.offset4
+            .list
+              -if current_user
+                = link_to t('.sign_out'),
+                        destroy_user_session_path,
+                        method: :delete
+                %hr/
+                = link_to t('.edit_account'),
+                        edit_user_registration_path(current_user)
+                %hr/
+                = link_to t('.delete_account'),
+                        "/users",
+                        method: :delete,
+                        data: { confirm: t('shared.are_you_sure') }
+              -else
+                %li= link_to t('.sign_in'), new_user_session_path
+                %hr/
+                %li= link_to t('.sign_up'), new_user_registration_path
     / Header ends
     / Navigation Starts
     / Note down the syntax before editing. It is the default twitter bootstrap navigation
@@ -48,20 +66,7 @@
               %li= link_to t('shared.map'),     maps_path
               %li= link_to t('shared.group'),   groups_path
             %ul.nav.pull-right
-              -if current_user
-                %li= link_to t('.sign_out'),
-                        destroy_user_session_path,
-                        method: :delete
-                %li= link_to t('.edit_account'),
-                        edit_user_registration_path(current_user)
-                %li= link_to t('.delete_account'),
-                        "/users",
-                        method: :delete,
-                        data: { confirm: t('shared.are_you_sure') }
-              -else
-                %li= link_to t('.sign_in'), new_user_session_path
-                %li= link_to t('.sign_up'), new_user_registration_path
-                %li= link_to_locales
+              %li= link_to_locales
     / Navigation Ends
     / Content strats
     .content

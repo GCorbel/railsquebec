@@ -1,28 +1,26 @@
 .logreg
-  .row
-    .span12
-      .logreg-page
-        %h3= t('.sign_up', :default => "Sign up")
-        %hr/
-        .form
-          = simple_form_for(resource,
-              as: resource_name,
-              url: registration_path(resource_name)) do |f|
-            %fieldset
-              .registrationFormLeft
-                = f.input :email, autofocus: true
-                = f.input :username
-                = f.input :email_visible,
-                  inline_label: t('.allow_to_view_email'),
-                  label: false
-                = f.input :twitter
-                = f.input :github
-              .registrationFormRight
-                = f.input :street
-                = f.input :city
-                = f.input :postal_code
-                = f.input :password
-                = f.input :password_confirmation
-            = f.button :submit, "Sign up"
-            = f.button :submit, t('.sign_up', :default => "Sign up")
-          = render "devise/shared/links"
+  .logreg-page
+    %h3= t('.sign_up', :default => "Sign up")
+    %hr/
+    .form
+      = simple_form_for(resource,
+          as: resource_name,
+          url: registration_path(resource_name)) do |f|
+        %fieldset
+          .registrationFormLeft
+            = f.input :email, autofocus: true
+            = f.input :username
+            = f.input :email_visible,
+              inline_label: t('.allow_to_view_email'),
+              label: false
+            = f.input :twitter
+            = f.input :github
+          .registrationFormRight
+            = f.input :street
+            = f.input :city
+            = f.input :postal_code
+            = f.input :password
+            = f.input :password_confirmation
+        = f.button :submit, "Sign up"
+        = f.button :submit, t('.sign_up', :default => "Sign up")
+      = render "devise/shared/links"

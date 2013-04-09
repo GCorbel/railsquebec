@@ -2,19 +2,19 @@
 .bor
 .main-content
   .row
-    .span4
+    .span3
       .main-box
         %h4= t('shared.events')
         - EventPresenter.latest(5).each do |event|
           %p= link_to event.title, event
         .link_index= link_to t('.view_all_events'), events_path
-    .span4
+    .span3
       .main-box
         %h4= t('shared.jobs')
         - JobPresenter.latest(5).each do |job|
           %p= link_to job.post_name, job
         .link_index= link_to t('.view_all_jobs'), jobs_path
-    .span4
+    .span3
       .main-box
         %h4= t('shared.members')
         - UserPresenter.latest(5).each do |user|

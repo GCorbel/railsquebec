@@ -1,11 +1,9 @@
 .logreg
-  .row
-    .span12
-      %h3= t('.resend_unlock_instructions', :default => "Resend unlock instructions")
-      = simple_form_for(resource,
-          as: resource_name,
-          url: unlock_path(resource_name),
-            html: { method: :post }) do |f|
-        = f.input :email
-        = f.button :email, t('.resend_unlock_instructions', :default => "Resend unlock instructions")
-      = render "devise/shared/links
+  %h3= t('.resend_unlock_instructions', :default => "Resend unlock instructions")
+  = simple_form_for(resource,
+      as: resource_name,
+      url: unlock_path(resource_name),
+        html: { method: :post }) do |f|
+    = f.input :email
+    = f.button :email, t('.resend_unlock_instructions', :default => "Resend unlock instructions")
+  = render "devise/shared/links

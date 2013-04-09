@@ -47,9 +47,9 @@
                         method: :delete,
                         data: { confirm: t('shared.are_you_sure') }
               -else
-                %li= link_to t('.sign_in'), new_user_session_path
+                = link_to t('.sign_in'), new_user_session_path
                 %hr/
-                %li= link_to t('.sign_up'), new_user_registration_path
+                = link_to t('.sign_up'), new_user_registration_path
     / Header ends
     / Navigation Starts
     / Note down the syntax before editing. It is the default twitter bootstrap navigation
@@ -72,7 +72,14 @@
     .content
       .container
         .row
-          .span12
+          .span3
+            .sidebar
+              .widget
+                %ul
+                  - Page.all.each do |page|
+                    %li= link_to page.title, page
+                    %hr
+          .span9
             = alert_box("success", flash[:notice])
             = alert_box("error", flash[:error])
             = alert_box("alert", flash[:alert])

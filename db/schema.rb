@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404222741) do
+ActiveRecord::Schema.define(:version => 20130410223845) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "title"
+    t.integer  "order"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "position"
+  end
 
   create_table "events", :force => true do |t|
     t.integer  "user_id",     :null => false
@@ -64,12 +72,16 @@ ActiveRecord::Schema.define(:version => 20130404222741) do
   add_index "page_translations", ["page_id"], :name => "index_page_translations_on_page_id"
 
   create_table "pages", :force => true do |t|
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "slug"
     t.boolean  "home"
-    t.boolean  "draft",      :default => true
+    t.boolean  "draft",       :default => true
+    t.integer  "category_id"
+    t.integer  "position"
   end
+
+  add_index "pages", ["category_id"], :name => "index_pages_on_category_id"
 
   create_table "users", :force => true do |t|
     t.string   "github",                 :default => ""

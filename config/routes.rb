@@ -1,5 +1,5 @@
 Railsquebec::Application.routes.draw do
-  scope "(:locale)", locale: /en|fr/ do
+  scope "(:locale)", locale: /en|fr/, defaults: { locale: "fr" } do
     get "jobs/index"
 
     get "maps/index"

@@ -276,3 +276,26 @@ fr:
       username: "Nom d'utilisateur : %{username}"
       city: "Ville : %{city}"
       registration_date: "Date d'inscription : %{date}"
+
+  flash:
+    actions:
+      create:
+        notice: "Votre %{resource_name} a été ajouté"
+      update:
+        notice: "Votre %{resource_name} a été modifié"
+      destroy:
+        notice: "Votre %{resource_name} a été supprimé"
+    events:
+      create:
+        notice: "Votre évènement a été ajouté"
+      update:
+        notice: "Votre évènement a été modifié"
+      destroy:
+        notice: "Votre évènement a été supprimé"
+    jobs:
+      create:
+        notice: "Votre job a été ajouté"
+      update:
+        notice: "Votre job a été modifié"
+      destroy:
+        notice: "Votre job a été supprimé"

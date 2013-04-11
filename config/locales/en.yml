@@ -58,3 +58,11 @@ en:
       username: "Username : %{username}"
       city: "City : %{city}"
       registration_date: "Registration date : %{date}"
+  flash:
+    actions:
+      create:
+        notice: "Your %{resource_name} has been created"
+      update:
+        notice: "Your %{resource_name} has been updated"
+      destroy:
+        notice: "Your %{resource_name} has been deleted"

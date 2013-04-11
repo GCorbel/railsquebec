@@ -17,7 +17,7 @@ feature "Jobs" do
     sign_in job.user
     visit new_job_path
     fill_job_form
-    expect(page).to have_content("Job was successfully created")
+    expect(page).to have_content("Your Job has been created")
     expect(page).to have_content("Post Name")
   end
 
@@ -25,7 +25,7 @@ feature "Jobs" do
     sign_in job.user
     visit edit_job_path(job)
     fill_job_form
-    expect(page).to have_content("Job was successfully updated")
+    expect(page).to have_content("Your Job has been updated")
     expect(page).to have_content("Post Name")
   end
 
@@ -35,7 +35,7 @@ feature "Jobs" do
     within(".form-actions") do
       click_on "Delete"
     end
-    expect(page).to have_content("Job was successfully destroyed")
+    expect(page).to have_content("Your Job has been deleted")
     expect(page).to_not have_content("Post Name")
   end
 end

@@ -17,7 +17,7 @@ feature "Events" do
     sign_in event.user
     visit new_event_path
     fill_event_form
-    expect(page).to have_content("Event was successfully created")
+    expect(page).to have_content("Your Event has been created")
     expect(page).to have_content("Event title")
   end
 
@@ -25,7 +25,7 @@ feature "Events" do
     sign_in event.user
     visit edit_event_path(event)
     fill_event_form
-    expect(page).to have_content("Event was successfully updated")
+    expect(page).to have_content("Your Event has been updated")
     expect(page).to have_content("Event title")
   end
 
@@ -35,7 +35,7 @@ feature "Events" do
     within(".form-actions") do
       click_on "Delete"
     end
-    expect(page).to have_content("Event was successfully destroyed")
+    expect(page).to have_content("Your Event has been deleted")
     expect(page).to_not have_content("Event title")
   end
 end

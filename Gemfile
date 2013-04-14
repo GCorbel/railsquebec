@@ -65,6 +65,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'pry-debugger'
+  gem 'pry-rails'
 
   gem 'listen'
   gem 'rb-inotify', require: false

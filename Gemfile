@@ -62,9 +62,9 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry', '0.9.8.4'
-  gem 'pry-remote', '0.1.1'
-  gem 'pry-nav', '0.2.0'
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-debugger'
 
   gem 'listen'
   gem 'rb-inotify', require: false
@@ -82,6 +82,6 @@ gem 'geocoder',                               '1.1.6'
 gem 'jbuilder',                               '1.0.2'
 gem 'redcarpet',                              '2.2.2'
 gem 'cancan',                                 '1.6.9'
-gem 'minimalist_cms',                         '0.0.1'
+gem 'minimalist_cms',                         '0.0.4'
 gem 'google-analytics-rails',                 '0.0.3'
 gem 'devise-i18n-views',                      '0.2.5'

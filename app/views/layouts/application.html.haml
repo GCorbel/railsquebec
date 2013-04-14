@@ -79,7 +79,7 @@
                   %h4= category.title
                   %ul
                     - category.pages.each do |page|
-                      %li= link_to page.title, page
+                      %li= link_to page.title, minimalist.page_path(page)
           .span9
             = alert_box("success", flash[:notice])
             = alert_box("error", flash[:error])

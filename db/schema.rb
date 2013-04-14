@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410223845) do
+ActiveRecord::Schema.define(:version => 20130414140920) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -55,6 +55,24 @@ ActiveRecord::Schema.define(:version => 20130410223845) do
   end
 
   add_index "jobs", ["user_id"], :name => "index_jobs_on_user_id"
+
+  create_table "page_part_translations", :force => true do |t|
+    t.integer  "page_part_id"
+    t.string   "locale"
+    t.text     "body"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "page_part_translations", ["locale"], :name => "index_page_part_translations_on_locale"
+  add_index "page_part_translations", ["page_part_id"], :name => "index_page_part_translations_on_page_part_id"
+
+  create_table "page_parts", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "page_id"
+  end
 
   create_table "page_translations", :force => true do |t|
     t.integer  "page_id"

@@ -6,7 +6,7 @@ PagePart.delete_all
 Page.translation_table.delete_all
 PagePage.translation_table.delete_all
 
-page = Page.create!(title: 'Accueil', home: true)
+Page.create!(title: 'Accueil', home: true)
 
 def create_category(fr, en)
   I18n.locale = :fr

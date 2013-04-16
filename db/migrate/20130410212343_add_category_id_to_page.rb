@@ -1,6 +1,7 @@
 class AddCategoryIdToPage < ActiveRecord::Migration
   def change
-    add_column :pages, :category_id, :integer
-    add_index :pages, :category_id
+    change_table :pages do |t|
+      t.references :category
+    end
   end
 end

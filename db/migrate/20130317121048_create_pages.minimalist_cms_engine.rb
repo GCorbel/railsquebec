@@ -7,7 +7,7 @@ class CreatePages < ActiveRecord::Migration
       t.boolean :home
       t.boolean :draft, default: true
     end
-    Page.create_translation_table! title: :string, body: :text, slug: :string, meta_keywords: :string, meta_description: :text
+    Page.create_translation_table! title: :string, slug: :string, meta_keywords: :string, meta_description: :text
   end
 
   def down

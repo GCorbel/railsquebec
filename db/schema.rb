@@ -78,7 +78,6 @@ ActiveRecord::Schema.define(:version => 20130414140920) do
     t.integer  "page_id"
     t.string   "locale"
     t.string   "title"
-    t.text     "body"
     t.string   "slug"
     t.string   "meta_keywords"
     t.text     "meta_description"
@@ -98,8 +97,6 @@ ActiveRecord::Schema.define(:version => 20130414140920) do
     t.integer  "category_id"
     t.integer  "position"
   end
-
-  add_index "pages", ["category_id"], :name => "index_pages_on_category_id"
 
   create_table "users", :force => true do |t|
     t.string   "github",                 :default => ""

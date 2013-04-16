@@ -1,6 +1,9 @@
 Railsquebec::Application.routes.draw do
   scope "(:locale)", locale: /en|fr/, defaults: { locale: "fr" } do
     mount MinimalistCms::Engine, at: '/page'
+
+    root to: 'minimalist_cms/pages#show'
+
     get "jobs/index"
 
     get "maps/index"

@@ -21,6 +21,12 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="images/favicon.ico" rel="shortcut icon")
 
+    - if I18n.locale == :fr
+      :javascript
+        window.locale = 'fr'
+    - else
+      :javascript
+        window.locale = 'en'
 
   %body
     / Header starts

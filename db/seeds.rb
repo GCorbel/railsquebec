@@ -3,8 +3,8 @@
 Category.delete_all
 Page.delete_all
 PagePart.delete_all
-Page.translation_table.delete_all
-PagePage.translation_table.delete_all
+Page.translation_class.delete_all
+PagePage.translation_class.delete_all
 
 Page.create!(title: 'Accueil', home: true)
 

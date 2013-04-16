@@ -157,7 +157,7 @@ a:hover{
 }
 
 .content ul li{
-  background-image:url('../img/list-r.png');
+  background-image:url('/assets/list-r.png');
 }
 
 .blog .meta i{
@@ -229,5 +229,5 @@ footer{
 }
 
 footer ul li{
-  background-image:url('../img/list-r.png');
+  background-image:url('/assets/list-r.png');
 }

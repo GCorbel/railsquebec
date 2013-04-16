@@ -3,8 +3,10 @@
 Category.delete_all
 Page.delete_all
 PagePart.delete_all
+Page.translation_table.delete_all
+PagePage.translation_table.delete_all
 
-home = Page.create!(title: 'Accueil', home: true)
+page = Page.create!(title: 'Accueil', home: true)
 
 def create_category(fr, en)
   I18n.locale = :fr

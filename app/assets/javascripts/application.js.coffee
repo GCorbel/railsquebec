@@ -11,3 +11,14 @@
 $(document).ready ->
   initMarkdown()
   initMap()
+  prefixAjax()
+
+@prefixAjax = ->
+  $.ajaxSetup
+    beforeSend: (xhr) ->
+      prefix = ''
+      if @url[0..5] == '/pages'
+        prefix = '/page'
+
+      @url = '/' + window.locale + prefix + @url
+      xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))

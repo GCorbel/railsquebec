@@ -34,7 +34,8 @@ module ApplicationHelper
 
   def link_to_locales
     text = I18n.locale == :en ? "Version Française" : "English Version"
-    locale = I18n.locale == :en ? :fr : :en
-    link_to raw("<i class='icon-flag'></i> #{text}"), minimalist.root_path(locale: locale)
+    locale = I18n.locale == :en ? 'fr' : 'en'
+    path = url_for(controller: 'pages', action: 'show', locale: locale)
+    link_to raw("<i class='icon-flag'></i> #{text}"), path
   end
 end

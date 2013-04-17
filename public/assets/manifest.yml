@@ -757,6 +757,8 @@ jquery-ui/ui-icons_888888_256x240.png: jquery-ui/ui-icons_888888_256x240-8040cfc
 jquery-ui/ui-icons_888888_256x240/index.png: jquery-ui/ui-icons_888888_256x240-8040cfcc88792375b7788feb59189eef.png
 jquery-ui/ui-icons_cd0a0a_256x240.png: jquery-ui/ui-icons_cd0a0a_256x240-d4a62216bf6f0cd0071149890763a5ff.png
 jquery-ui/ui-icons_cd0a0a_256x240/index.png: jquery-ui/ui-icons_cd0a0a_256x240-d4a62216bf6f0cd0071149890763a5ff.png
+ckeditor/init_ckeditor.js: ckeditor/init_ckeditor-d65c0ccda1d31477987cf1de25099744.js
+ckeditor/init_ckeditor/index.js: ckeditor/init_ckeditor-d65c0ccda1d31477987cf1de25099744.js
 ckeditor/plugins/sourcedialog/icons/sourcedialog-rtl.png: ckeditor/plugins/sourcedialog/icons/sourcedialog-rtl-a0cfc082db60f3732a1186ebc56d0d13.png
 ckeditor/plugins/sourcedialog/icons/sourcedialog-rtl/index.png: ckeditor/plugins/sourcedialog/icons/sourcedialog-rtl-a0cfc082db60f3732a1186ebc56d0d13.png
 ckeditor/plugins/sourcedialog/icons/sourcedialog.png: ckeditor/plugins/sourcedialog/icons/sourcedialog-1dc78746fbf3dd12177748228f2ed202.png

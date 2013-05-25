@@ -5,6 +5,4 @@ class Page < ActiveRecord::Base
   belongs_to :category
 
   attr_accessible :position
-
-  default_scope order(:position)
 end

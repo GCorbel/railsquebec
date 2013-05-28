@@ -11,6 +11,7 @@
 $(document).ready ->
   initMarkdown()
   initMap()
+  initDiscussionGroup()
   prefixAjax()
 
 @prefixAjax = ->

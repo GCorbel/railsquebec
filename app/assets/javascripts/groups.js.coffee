@@ -1,4 +1,4 @@
-$(document).ready ->
+@initDiscussionGroup = ->
   if $('#forum_embed').length
     src = 'https://groups.google.com/forum/embed/?place=forum/rubyquebec'
     + '&showsearch=true&showpopout=true&showtabs=false'

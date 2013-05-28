@@ -1,3 +1,14 @@
 .well
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %button{ :class => 'btn btn-primary', :type => 'button', :data => { :toggle => 'button' }} test
+      %form{:id => "map_filters"}
+        %ul
+          - [[:jobs,"jobs"],[:users,"utilisateurs"],[:events,"événements"]].each do |filter|
+            %li
+              %label
+                = filter.second
+              %input{:type => 'checkbox', :name => filter.first, :id => "filter_#{filter.first}", :checked => true}
+.well
   #theMap
     %div{:id => "map_canvas"}

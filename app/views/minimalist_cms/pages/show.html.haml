@@ -1,0 +1,22 @@
+= editable(@page) { @page.body }
+.bor
+.main-content
+  .row
+    .span3
+      .main-box
+        %h4= t('shared.events')
+        - EventPresenter.latest(5).each do |event|
+          %p= link_to event.title, event
+        .link_index= link_to t('.view_all_events'), events_path
+    .span3
+      .main-box
+        %h4= t('shared.jobs')
+        - JobPresenter.latest(5).each do |job|
+          %p= link_to job.post_name, job
+        .link_index= link_to t('.view_all_jobs'), jobs_path
+    .span3
+      .main-box
+        %h4= t('shared.members')
+        - UserPresenter.latest(5).each do |user|
+          %p= link_to user.username, user
+        .link_index= link_to t('.view_all_users'), users_path

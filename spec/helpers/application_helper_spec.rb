@@ -56,7 +56,7 @@ describe ApplicationHelper do
     end
   end
 
-  describe :title do
+  describe :browser_title do
     it "send a content for the title" do
       helper.browser_title('A title')
       expect(helper.content_for(:title)).to eq 'A title'

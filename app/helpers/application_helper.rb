@@ -45,4 +45,8 @@ module ApplicationHelper
   def browser_description(description)
     content_for(:description) { description }
   end
+
+  def browser_keywords(keywords)
+    content_for(:keywords) { keywords }
+  end
 end

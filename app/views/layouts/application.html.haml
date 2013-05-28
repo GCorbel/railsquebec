@@ -6,6 +6,8 @@
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
     - if content_for?(:description)
       %meta{name: "description", content: content_for(:description)}
+    - if content_for?(:keywords)
+      %meta{name: "keywords", content: content_for(:keywords)}
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
     %title= content_for?(:title) ? "#{yield(:title)} - RubyQuebec" : "RubyQuebec"
     = csrf_meta_tags

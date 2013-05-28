@@ -69,4 +69,11 @@ describe ApplicationHelper do
       expect(helper.content_for(:description)).to eq 'A description'
     end
   end
+
+  describe :browser_keywords do
+    it "send a content for the description" do
+      helper.browser_keywords('Some keywords')
+      expect(helper.content_for(:keywords)).to eq 'Some keywords'
+    end
+  end
 end

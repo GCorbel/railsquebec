@@ -37,4 +37,8 @@ module ApplicationHelper
     locale = I18n.locale == :en ? 'fr' : 'en'
     link_to raw("<i class='icon-flag'></i> #{text}"), "/#{locale}/"
   end
+
+  def browser_title(title)
+    content_for(:title) { title }
+  end
 end

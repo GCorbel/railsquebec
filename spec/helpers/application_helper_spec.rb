@@ -55,4 +55,11 @@ describe ApplicationHelper do
       expect(helper.markdown("**test**")).to eq "<p><strong>test</strong></p>\n"
     end
   end
+
+  describe :title do
+    it "send a content for the title" do
+      helper.browser_title('A title')
+      expect(helper.content_for(:title)).to eq 'A title'
+    end
+  end
 end

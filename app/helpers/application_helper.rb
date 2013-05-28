@@ -41,4 +41,8 @@ module ApplicationHelper
   def browser_title(title)
     content_for(:title) { title }
   end
+
+  def browser_description(description)
+    content_for(:description) { description }
+  end
 end

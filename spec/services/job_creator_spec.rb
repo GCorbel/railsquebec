@@ -5,29 +5,24 @@ describe JobCreator do
   let(:user) { build_stubbed(:user) }
   let(:params) { job.attributes }
 
+  subject { job }
+
   before do
     job.stub(:save)
+    job.stub(:geocode)
     Job.stub(:new).and_return(job)
   end
 
   describe :execute do
-    it "assign the user to the job" do
-      JobCreator.new(user, params).execute
-      expect(job.user).to eq user
-    end
+    before { JobCreator.new(user, params).execute }
+
+    its(:user) { should eq user }
 
     context "when the job is valid" do
       before { job.stub(:valid?).and_return(true) }
 
-      it "save the job" do
-        job.should_receive(:save)
-        JobCreator.new(user, params).execute
-      end
-
-      it "geolocalize the job" do
-        job.should_receive(:geocode)
-        JobCreator.new(user, params).execute
-      end
+      it { should have_received(:save) }
+      it { should have_received(:geocode) }
     end
   end
 end

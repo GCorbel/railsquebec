@@ -46,13 +46,13 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails',        '2.14.0.rc1'
   gem 'capybara',           '2.0.2'
   gem 'capybara-firebug',   '1.3.0'
   gem 'capybara-webkit',    '0.14.1'
   gem 'factory_girl_rails', '4.2.0'
   gem 'fuubar',             '1.1.0'
-  gem 'shoulda-matchers',   '1.4.2'
+  gem 'shoulda-matchers',   '2.1.0'
   gem 'launchy',            '2.1.2'
 end
 

@@ -5,29 +5,24 @@ describe EventCreator do
   let(:user) { build_stubbed(:user) }
   let(:params) { event.attributes }
 
+  subject { event }
+
   before do
     event.stub(:save)
+    event.stub(:geocode)
     Event.stub(:new).and_return(event)
   end
 
   describe :execute do
-    it "assign the user to the event" do
-      EventCreator.new(user, params).execute
-      expect(event.user).to eq user
-    end
+    before { EventCreator.new(user, params).execute }
+
+    its(:user) { should eq user }
 
     context "when the event is valid" do
       before { event.stub(:valid?).and_return(true) }
 
-      it "save the event" do
-        event.should_receive(:save)
-        EventCreator.new(user, params).execute
-      end
-
-      it "geolocalize the event" do
-        event.should_receive(:geocode)
-        EventCreator.new(user, params).execute
-      end
+      it { should have_received(:save) }
+      it { should have_received(:geocode) }
     end
   end
 end

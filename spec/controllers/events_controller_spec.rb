@@ -4,7 +4,7 @@ describe EventsController do
   describe "POST 'create'" do
     it "create a job" do
       params = {}
-      event_creator = stub
+      event_creator = double
       user = build_stubbed(:user)
       event = build_stubbed(:event)
 

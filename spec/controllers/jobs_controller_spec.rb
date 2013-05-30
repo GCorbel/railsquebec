@@ -4,7 +4,7 @@ describe JobsController do
   describe "POST 'create'" do
     it "create a job" do
       params = {}
-      job_creator = stub
+      job_creator = double
       user = build_stubbed(:user)
       job = build_stubbed(:job)
 

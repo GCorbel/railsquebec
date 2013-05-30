@@ -4,7 +4,7 @@ describe UsersController do
   describe "POST 'create'" do
     it "create a user" do
       params = {}
-      user_creator = stub
+      user_creator = double
       user = build_stubbed(:user)
 
       UserCreator.should_receive(:new).with(params).and_return(user_creator)
